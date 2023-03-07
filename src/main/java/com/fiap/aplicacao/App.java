@@ -64,8 +64,10 @@ public class App {
         System.out.println(paciente4);
         System.out.println(paciente5);
 
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
-        EntityManager em = emf.createEntityManager();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa"); // instancia objetos EntityManage, gerenciando as suas entidades
+
+
+        EntityManager em = emf.createEntityManager(); // efetua a operações de acesso ao banco de dados
 
         em.getTransaction().begin();
         em.persist(paciente);
